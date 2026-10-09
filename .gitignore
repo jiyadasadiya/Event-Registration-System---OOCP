@@ -1,0 +1,5 @@
+Executable/Project
+Executable/Project.exe
+*.o
+*.obj
+.vscode/

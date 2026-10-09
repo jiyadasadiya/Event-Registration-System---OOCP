@@ -1,0 +1,16 @@
+@startuml
+title Event Registration System - Class Diagram
+class Event { -id:int -name:string -date:string -venue:string -capacity:int -registered:int +seatsLeft():int +addRegistration():void +removeRegistration():void }
+class Participant { -id:int -name:string -email:string }
+class Organizer { -id:int -name:string -department:string }
+class Registration { -id:int -participantId:int -eventId:int -timestamp:string }
+class EventSystem { -events:vector<Event> -participants:vector<Participant> -organizers:vector<Organizer> -registrations:vector<Registration> +run():void +registerParticipant():void +cancelRegistration():void }
+class FileManager { +loadEvents():bool +saveEvents():bool +loadParticipants():bool +saveParticipants():bool }
+EventSystem "1" o-- "*" Event
+EventSystem "1" o-- "*" Participant
+EventSystem "1" o-- "*" Organizer
+EventSystem "1" o-- "*" Registration
+Registration "*" --> "1" Participant
+Registration "*" --> "1" Event
+EventSystem --> FileManager
+@enduml

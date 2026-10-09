@@ -1,0 +1,2 @@
+1|C++ Workshop|2026-11-15|Seminar Hall A|40|0
+2|Tech Talk|2026-11-20|Auditorium|100|0

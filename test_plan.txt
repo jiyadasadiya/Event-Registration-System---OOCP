@@ -1,0 +1,12 @@
+MANUAL TEST PLAN
+1. View events: seeded events should display and seats left should equal capacity minus registered.
+2. Add participant with valid name/email: participant is saved to participants.txt.
+3. Add participant with malformed email: validation error, no record added.
+4. Register valid participant to valid event: registration record is created, registered count increments, seat count decreases.
+5. Register same participant to same event again: duplicate registration rejected.
+6. Fill an event to capacity and attempt another registration: full-event exception is shown.
+7. Cancel an existing registration: registration removed and one seat released.
+8. Enter invalid menu input: program reports numeric-option requirement without terminating.
+9. Exit and restart: records remain available, demonstrating file persistence.
+10. Attempt unknown participant/event IDs: registration rejected.
+NOTE: These are test cases, not a claim that every scenario has been executed. Run them on the target computer and record actual results/screenshots.

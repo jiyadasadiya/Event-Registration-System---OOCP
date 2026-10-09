@@ -1,0 +1,22 @@
+CPP10 FINAL SUBMISSION — EVENT REGISTRATION SYSTEM
+
+Student Name: [ENTER YOUR NAME]
+Enrollment Number: [ENTER YOUR ENROLLMENT NUMBER]
+GitHub Repository: [ADD YOUR REPOSITORY URL]
+
+Included in this package:
+- Source/: modular C++ source and header files
+- Data/: event, participant, organizer, and registration text files
+- Diagrams/: four PlantUML UML diagram source files
+- Tests/: manual test plan
+- README.txt and QUICK_START.txt
+- ProjectReport.md and ProjectReport.pdf
+- Executable/: compiled binary will be generated when built on the target OS/compiler
+- Screenshots/: reserved for genuine screenshots captured during execution
+
+Before upload:
+1. Replace the student name, enrollment number, institution/course details, and GitHub placeholders.
+2. Compile and execute the application on the target computer.
+3. Run the test plan and capture real screenshots.
+4. Render UML sources to PNG/SVG if image diagrams are required.
+5. Confirm that the final format matches the official submission instructions.

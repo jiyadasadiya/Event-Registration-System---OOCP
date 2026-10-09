@@ -1,0 +1,13 @@
+digraph G { graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.5", ranksep="0.7", label="EVENT REGISTRATION SYSTEM — CLASS DIAGRAM", labelloc=t, fontsize=20]; node [shape=box, style="rounded,filled", fillcolor="#f5f7fb", color="#44546a", fontname="Arial", fontsize=10]; edge [color="#44546a", fontname="Arial", fontsize=9]; EventSystem [label="EventSystem
+events: vector of Event
+participants: vector of Participant
+organizers: vector of Organizer
+registrations: vector of Registration
+run() / registerParticipant() / cancelRegistration()"]; Event [label="Event
+id, name, date, venue
+capacity, registered
+seatsLeft() / addRegistration() / removeRegistration()"]; Participant [label="Participant
+id, name, email"]; Organizer [label="Organizer
+id, name, department"]; Registration [label="Registration
+id, participantId, eventId, timestamp"]; FileManager [label="FileManager
+load records / save records"]; EventSystem -> Event [label="contains many"]; EventSystem -> Participant [label="contains many"]; EventSystem -> Organizer [label="contains many"]; EventSystem -> Registration [label="contains many"]; Registration -> Participant [label="references"]; Registration -> Event [label="references"]; EventSystem -> FileManager [label="uses"]; }

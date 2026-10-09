@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+actor Participant
+actor Organizer
+actor "System Administrator" as Admin
+rectangle "Event Registration System" {
+ usecase "View events" as UC1
+ usecase "Register for event" as UC2
+ usecase "Cancel registration" as UC3
+ usecase "Manage events" as UC4
+ usecase "Manage participants" as UC5
+ usecase "Manage organizers" as UC6
+ usecase "View registrations" as UC7
+ usecase "Save/load records" as UC8
+}
+Participant --> UC1
+Participant --> UC2
+Participant --> UC3
+Organizer --> UC4
+Organizer --> UC7
+Admin --> UC4
+Admin --> UC5
+Admin --> UC6
+UC2 .> UC8 : <<include>>
+UC3 .> UC8 : <<include>>
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+actor User
+participant "EventSystem" as ES
+participant "Event" as E
+participant "Registration" as R
+participant "FileManager" as FM
+User -> ES: select register
+ES -> User: request participant ID and event ID
+User -> ES: submit IDs
+ES -> ES: validate IDs and duplicate
+ES -> E: check seats / addRegistration()
+E --> ES: success or full exception
+ES -> R: create registration
+ES -> FM: save events, participants, organizers, registrations
+FM --> ES: save status
+ES --> User: confirmation or error
+@enduml

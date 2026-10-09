@@ -1,0 +1,23 @@
+@startuml
+start
+:Display main menu;
+:Choose Register Participant;
+:Enter participant ID and event ID;
+if (Both IDs exist?) then (yes)
+ if (Already registered?) then (yes)
+  :Show duplicate error;
+ else (no)
+  if (Seats available?) then (yes)
+   :Create registration record;
+   :Increase event registered count;
+   :Save all data files;
+   :Show confirmation;
+  else (no)
+   :Show event full message;
+  endif
+ endif
+else (no)
+ :Show invalid ID message;
+endif
+stop
+@enduml

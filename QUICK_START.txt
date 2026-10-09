@@ -1,0 +1,13 @@
+QUICK START
+1. Extract the ZIP.
+2. Open a terminal in the extracted project root.
+3. Compile:
+   g++ -std=c++11 Source/main.cpp Source/Event.cpp Source/Participant.cpp Source/Organizer.cpp Source/Registration.cpp Source/FileManager.cpp Source/EventSystem.cpp -o Executable/Project
+4. Run from the Executable folder so ../Data resolves correctly:
+   cd Executable
+   ./Project
+   (Windows: Project.exe)
+5. Try option 1 to view events, option 3 to add a participant, option 7 to register, option 8 to view registrations, then option 0 to save and exit.
+6. Re-run and use options 1, 4, and 8 to verify persistence.
+
+Fill student name, enrollment number, and GitHub URL placeholders before submission. Capture genuine screenshots after testing.

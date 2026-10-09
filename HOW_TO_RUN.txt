@@ -1,0 +1,18 @@
+WHERE IS MAIN?
+The main function is in Source/main.cpp (not in the project root). Open that file in VS Code if you want to inspect the entry point.
+
+EASIEST WINDOWS METHOD
+1. Install a C++ compiler such as MSYS2 MinGW-w64 (UCRT64), and ensure g++ is on PATH.
+2. Extract the whole ZIP folder.
+3. Double-click RUN_ON_WINDOWS.bat from the project root.
+4. It compiles the .cpp files into Executable\Project.exe and runs it from the correct working directory.
+
+MANUAL METHOD IN VS CODE TERMINAL
+Open a terminal at the project root and run:
+g++ -std=c++11 Source\main.cpp Source\Event.cpp Source\Participant.cpp Source\Organizer.cpp Source\Registration.cpp Source\FileManager.cpp Source\EventSystem.cpp -o Executable\Project.exe
+Then run:
+cd Executable
+.\Project.exe
+
+IMPORTANT
+A Linux executable cannot run as a Windows .exe. The Project binary included in the original package was compiled for Linux. Build the Windows .exe on Windows using the command above.
